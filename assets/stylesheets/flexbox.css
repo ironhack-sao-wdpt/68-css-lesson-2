@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column; /* O flex-direction muda o eixo principal */
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between; /* distribuindo os itens no eixo principal (que por conta do flex-direction: column, é o vertical) */
+  align-items: center; /* centralizando horizontalmente, no eixo cruzado */
+}
+
+.item {
+  width: 25%;
+  height: 200px;
+  border: 1px solid black;
+  margin: 5px;
+}

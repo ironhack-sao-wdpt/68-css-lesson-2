@@ -1,0 +1,32 @@
+/* Para ser considerada responsiva, uma página web deve ser adaptar à diferentes tamanhos de tela sem quebrar a visualização */
+
+.main-title {
+  font-size: 64px;
+}
+
+.container {
+  margin: 0 80px;
+}
+
+.img {
+  width: 600px;
+}
+
+/* Abaixo temos uma media query, um conjunto de regras que só será aplicado se a tela do dispositivo do usuário estiver dentro dos critérios estabelecidos. Isso nos permite aplicar regras diferentes de CSS para smartphones e desktops, por exemplo */
+@media (min-width: 350px) and (max-width: 450px) {
+  .main-title {
+    font-size: 36px;
+  }
+
+  .container {
+    margin: 0 10px;
+  }
+
+  .img {
+    width: 390px;
+  }
+}
+
+/* Mobile first */
+
+/* unidades de medida responsivas */
