@@ -1,32 +1,62 @@
 /* Para ser considerada responsiva, uma página web deve ser adaptar à diferentes tamanhos de tela sem quebrar a visualização */
 
-.main-title {
-  font-size: 64px;
+/* Mobile first: as regras base são para dispositivos móveis, ou seja, telas menores, e nas media queries vamos ajustando o conteúdo para as telas maiores conforme a necessidade */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ao alterar o tamanho de fonte do elemento html (elemento raiz), o rem terá seu valor atualizado para ser igual ao novo tamanho de fonte. Isso vai automaticamente escalar todo o texto da página com o novo tamanho raiz de uma vez, economizando a necessidade de alterarmos os tamanho de fonte manualmente  */
+html {
+  font-size: 10px;
 }
 
 .container {
-  margin: 0 80px;
+  margin: 0 10px;
+  height: 100vh; /* viewport height, altura da tela física do dispositivo. 1vh = 1% da altura em pixels */
+  width: calc(
+    100vw - 10px * 2
+  ); /* Descontando a margem ao definir a largura do container */
+  /* viewport width, largura da tela física do dispositivo. 1vw = 1% da largura em pixels */
 }
 
 .img {
-  width: 600px;
+  width: 390px;
+}
+
+/* 1 rem = 16px por padrão */
+
+.main-title {
+  font-size: 4rem;
+}
+
+/* unidades de medida responsivas */
+
+/* Unidades de medida definem o tamanho dos elementos na tela */
+
+.paragraph {
+  font-size: 1.5em; /* 1em = font-size padrão do elemento afetado (em px) */
+  width: 80%; /* As porcentagens são sempre referentes às dimensões do elemento pai */
 }
 
 /* Abaixo temos uma media query, um conjunto de regras que só será aplicado se a tela do dispositivo do usuário estiver dentro dos critérios estabelecidos. Isso nos permite aplicar regras diferentes de CSS para smartphones e desktops, por exemplo */
-@media (min-width: 350px) and (max-width: 450px) {
-  .main-title {
-    font-size: 36px;
+@media (min-width: 700px) {
+  html {
+    font-size: 16px;
   }
 
   .container {
-    margin: 0 10px;
+    margin: 0 80px;
+    width: calc(100vw - 80px * 2);
   }
 
   .img {
-    width: 390px;
+    width: 600px;
+    margin: 2rem 0;
+  }
+
+  .half-column {
+    width: 50%;
   }
 }
-
-/* Mobile first */
-
-/* unidades de medida responsivas */

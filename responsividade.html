@@ -17,7 +17,8 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </h1>
 
-      <p>
+      <!-- Já esse parágrafo terá 80% da largura do container, que é maior que a half-column -->
+      <p class="paragraph">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ducimus
         quibusdam aut itaque, eveniet, impedit modi autem quidem debitis aperiam
         voluptatem non? Placeat quidem possimus, omnis doloremque labore tenetur
@@ -26,12 +27,15 @@
 
       <img class="img" src="./dog.jpg" alt="Um cachorro" />
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ducimus
-        quibusdam aut itaque, eveniet, impedit modi autem quidem debitis aperiam
-        voluptatem non? Placeat quidem possimus, omnis doloremque labore tenetur
-        laboriosam.
-      </p>
+      <div class="half-column">
+        <!-- Esse parágrafo terá 80% da largura da div half-column, que por sua vez, já tem 50% da largura do container. Por conta disso, esse parágrafo será menos que o de cima -->
+        <p class="paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ducimus
+          quibusdam aut itaque, eveniet, impedit modi autem quidem debitis
+          aperiam voluptatem non? Placeat quidem possimus, omnis doloremque
+          labore tenetur laboriosam.
+        </p>
+      </div>
     </div>
   </body>
 </html>
